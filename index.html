@@ -267,6 +267,123 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/28/angular/angular1.x性能问题解决方案/" itemprop="url">
+                  angular1.x 性能问题解决方案
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-28T16:57:10+08:00" content="2016-10-28">
+              2016-10-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/angular/" itemprop="url" rel="index">
+                    <span itemprop="name">angular</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+
+
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="angularjs1-x性能"><a href="#angularjs1-x性能" class="headerlink" title="angularjs1.x性能"></a>angularjs1.x性能</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">angular的双向班定依赖于脏值检查，可当warch数超过2000时，</div><div class="line">angular的性能问题就暴露出来了,可是有些watch又是必须的，例如</div><div class="line">列表中的checkbox等；</div></pre></td></tr></table></figure>
+<h2 id="个人的解决方案"><a href="#个人的解决方案" class="headerlink" title="个人的解决方案"></a>个人的解决方案</h2><h3 id="1-传统方法：减少watch数，使用bind-once指令，使用单向绑定"><a href="#1-传统方法：减少watch数，使用bind-once指令，使用单向绑定" class="headerlink" title="1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定"></a>1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定</h3><h3 id="2-终极方案：组装html"><a href="#2-终极方案：组装html" class="headerlink" title="2.  终极方案：组装html"></a>2.  终极方案：组装html</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var element = $compile(html)($scope);//此处html为组装完成的DOM，类似于jquery的方式</div><div class="line">$($(angular.element(document)).find(&apos;#render&apos; + index)).html(element);</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/25/angular/angular1.x精华插件/" itemprop="url">
                   angular1.x 精华插件
                 </a>
@@ -525,7 +642,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
