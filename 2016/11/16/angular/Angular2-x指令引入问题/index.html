@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。 Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本， 首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块! eg: 声明： 12345678@Ng">
+<meta name="description" content="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块! eg: 声明： 12345678@NgMod">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular2.x指令引入问题">
 <meta property="og:url" content="http://yoursite.com/2016/11/16/angular/Angular2-x指令引入问题/index.html">
 <meta property="og:site_name" content="烟雨江南的博客">
-<meta property="og:description" content="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。 Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本， 首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块! eg: 声明： 12345678@Ng">
-<meta property="og:updated_time" content="2016-11-16T09:43:43.926Z">
+<meta property="og:description" content="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块! eg: 声明： 12345678@NgMod">
+<meta property="og:updated_time" content="2016-11-16T09:48:29.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular2.x指令引入问题">
-<meta name="twitter:description" content="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。 Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本， 首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块! eg: 声明： 12345678@Ng">
+<meta name="twitter:description" content="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块! eg: 声明： 12345678@NgMod">
 
 
 
@@ -308,7 +308,8 @@
       
 
       
-        <h3 id="如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。。"><a href="#如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。。" class="headerlink" title="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。"></a>如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。</h3><p> Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，<br> 首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块!<br> eg:<br> 声明：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">    declarations:[TrsEchartsPie,TrsEchartsMap,TrsEchartPolyline],</div><div class="line">    exports:[TrsEchartsPie,TrsEchartsMap,TrsEchartPolyline</div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line">export  class TrsEchartsModule&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <h3 id="如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。Angular1-x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2-x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块"><a href="#如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。Angular1-x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2-x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块" class="headerlink" title="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块!"></a>如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块!</h3><p> eg:<br> 声明：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">    declarations:[TrsEchartsPie,TrsEchartsMap,TrsEchartPolyline],</div><div class="line">    exports:[TrsEchartsPie,TrsEchartsMap,TrsEchartPolyline</div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line">export  class TrsEchartsModule&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p> 使用：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">    imports:[</div><div class="line">        TrsEchartsModule,//用到该指令的地方都需要引入</div><div class="line">    ],</div><div class="line">    declarations:[RealTimeComponent],</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -347,6 +348,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/16/angular/Angular2-x引入第三方组件/" rel="prev" title="Angular2.x引入第三方组件">
+                Angular2.x引入第三方组件 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -414,7 +419,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -431,7 +436,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -460,7 +465,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。。"><span class="nav-number">1.</span> <span class="nav-text">如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。Angular1-x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2-x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块"><span class="nav-number">1.</span> <span class="nav-text">如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块!</span></a></li></ol></div>
             
           </div>
         </section>
