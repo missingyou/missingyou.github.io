@@ -85,18 +85,18 @@
 
 
 <meta name="description" content="angularjs1.x性能123angular的双向班定依赖于脏值检查，可当warch数超过2000时，angular的性能问题就暴露出来了,可是有些watch又是必须的，例如列表中的checkbox等；
-个人的解决方案1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定2.  终极方案：组装html123var element = $compile(html)($scop">
+个人的解决方案1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定2.  终极方案：组装html12var element = $compile(html)($scope">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angular1.x 性能问题解决方案">
 <meta property="og:url" content="http://yoursite.com/2016/10/28/angular/angular1.x性能问题解决方案/index.html">
 <meta property="og:site_name" content="烟雨江南的博客">
 <meta property="og:description" content="angularjs1.x性能123angular的双向班定依赖于脏值检查，可当warch数超过2000时，angular的性能问题就暴露出来了,可是有些watch又是必须的，例如列表中的checkbox等；
-个人的解决方案1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定2.  终极方案：组装html123var element = $compile(html)($scop">
-<meta property="og:updated_time" content="2016-10-28T09:09:42.610Z">
+个人的解决方案1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定2.  终极方案：组装html12var element = $compile(html)($scope">
+<meta property="og:updated_time" content="2016-11-16T09:31:25.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angular1.x 性能问题解决方案">
 <meta name="twitter:description" content="angularjs1.x性能123angular的双向班定依赖于脏值检查，可当warch数超过2000时，angular的性能问题就暴露出来了,可是有些watch又是必须的，例如列表中的checkbox等；
-个人的解决方案1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定2.  终极方案：组装html123var element = $compile(html)($scop">
+个人的解决方案1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定2.  终极方案：组装html12var element = $compile(html)($scope">
 
 
 
@@ -294,8 +294,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/angular/" itemprop="url" rel="index">
-                    <span itemprop="name">angular</span>
+                  <a href="/categories/angular1-x/" itemprop="url" rel="index">
+                    <span itemprop="name">angular1.x</span>
                   </a>
                 </span>
 
@@ -331,7 +331,7 @@
 
       
         <h1 id="angularjs1-x性能"><a href="#angularjs1-x性能" class="headerlink" title="angularjs1.x性能"></a>angularjs1.x性能</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">angular的双向班定依赖于脏值检查，可当warch数超过2000时，</div><div class="line">angular的性能问题就暴露出来了,可是有些watch又是必须的，例如</div><div class="line">列表中的checkbox等；</div></pre></td></tr></table></figure>
-<h2 id="个人的解决方案"><a href="#个人的解决方案" class="headerlink" title="个人的解决方案"></a>个人的解决方案</h2><h3 id="1-传统方法：减少watch数，使用bind-once指令，使用单向绑定"><a href="#1-传统方法：减少watch数，使用bind-once指令，使用单向绑定" class="headerlink" title="1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定"></a>1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定</h3><h3 id="2-终极方案：组装html"><a href="#2-终极方案：组装html" class="headerlink" title="2.  终极方案：组装html"></a>2.  终极方案：组装html</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var element = $compile(html)($scope);//此处html为组装完成的DOM，类似于jquery的方式</div><div class="line">$($(angular.element(document)).find(&apos;#render&apos; + index)).html(element);</div></pre></td></tr></table></figure>
+<h2 id="个人的解决方案"><a href="#个人的解决方案" class="headerlink" title="个人的解决方案"></a>个人的解决方案</h2><h3 id="1-传统方法：减少watch数，使用bind-once指令，使用单向绑定"><a href="#1-传统方法：减少watch数，使用bind-once指令，使用单向绑定" class="headerlink" title="1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定"></a>1. 传统方法：减少watch数，使用bind-once指令，使用单向绑定</h3><h3 id="2-终极方案：组装html"><a href="#2-终极方案：组装html" class="headerlink" title="2.  终极方案：组装html"></a>2.  终极方案：组装html</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var element = $compile(html)($scope);//此处html为组装完成的DOM，类似于jquery的方式</div><div class="line">$($(angular.element(document)).find(&apos;#render&apos; + index)).html(element);</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -364,6 +364,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/16/angular/Angular2-x指令引入问题/" rel="prev" title="Angular2.x指令引入问题">
+                Angular2.x指令引入问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -431,7 +435,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -445,6 +449,13 @@
             </div>
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>

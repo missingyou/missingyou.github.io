@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="angular2.x," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="1.修改配置文件pom.xml    1&amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt;
-2.修改依赖 将scope修改成provided,这样tomcat的包就不会打入war    12345&amp;lt;dependency&amp;gt;          &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;">
+<meta name="description" content="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。 Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本， 首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块! eg: 声明： 12345678@Ng">
 <meta property="og:type" content="article">
-<meta property="og:title" content="spring-boot 打成war包">
-<meta property="og:url" content="http://yoursite.com/2016/10/20/spring-boot打成war/index.html">
+<meta property="og:title" content="Angular2.x指令引入问题">
+<meta property="og:url" content="http://yoursite.com/2016/11/16/angular/Angular2-x指令引入问题/index.html">
 <meta property="og:site_name" content="烟雨江南的博客">
-<meta property="og:description" content="1.修改配置文件pom.xml    1&amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt;
-2.修改依赖 将scope修改成provided,这样tomcat的包就不会打入war    12345&amp;lt;dependency&amp;gt;          &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;">
-<meta property="og:updated_time" content="2016-10-21T09:32:41.392Z">
+<meta property="og:description" content="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。 Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本， 首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块! eg: 声明： 12345678@Ng">
+<meta property="og:updated_time" content="2016-11-16T09:43:43.926Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring-boot 打成war包">
-<meta name="twitter:description" content="1.修改配置文件pom.xml    1&amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt;
-2.修改依赖 将scope修改成provided,这样tomcat的包就不会打入war    12345&amp;lt;dependency&amp;gt;          &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;">
+<meta name="twitter:title" content="Angular2.x指令引入问题">
+<meta name="twitter:description" content="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。 Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本， 首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块! eg: 声明： 12345678@Ng">
 
 
 
@@ -117,10 +114,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/20/spring-boot打成war/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/16/angular/Angular2-x指令引入问题/"/>
 
 
-  <title> spring-boot 打成war包 | 烟雨江南的博客 </title>
+  <title> Angular2.x指令引入问题 | 烟雨江南的博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -268,7 +265,7 @@
             
             
               
-                spring-boot 打成war包
+                Angular2.x指令引入问题
               
             
           </h1>
@@ -280,30 +277,11 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-20T14:24:12+08:00" content="2016-10-20">
-              2016-10-20
+            <time itemprop="dateCreated" datetime="2016-11-16T17:30:16+08:00" content="2016-11-16">
+              2016-11-16
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/spring-boot/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-boot</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -330,11 +308,7 @@
       
 
       
-        <p>1.修改配置文件pom.xml<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;packaging&gt;war&lt;/packaging&gt;</div></pre></td></tr></table></figure></p>
-<p>2.修改依赖 将scope修改成provided,这样tomcat的包就不会打入war<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;  </div><div class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;  </div><div class="line">        &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;  </div><div class="line">        &lt;scope&gt;provided&lt;/scope&gt;  </div><div class="line">    &lt;/dependency&gt;</div></pre></td></tr></table></figure></p>
-<p>3.修改启动类继承SpringBootServletInitializer类，并重写SpringApplicationBuilder方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public class App extends SpringBootServletInitializer &#123;  </div><div class="line">  </div><div class="line">    @Override  </div><div class="line">    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) &#123;  </div><div class="line">        return application.sources(App.class);  </div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>4.mvn clean package</p>
-<p>5.请在tomcat7.0及以上部署</p>
+        <h3 id="如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。。"><a href="#如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。。" class="headerlink" title="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。"></a>如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。</h3><p> Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，<br> 首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块!<br> eg:<br> 声明：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">    declarations:[TrsEchartsPie,TrsEchartsMap,TrsEchartPolyline],</div><div class="line">    exports:[TrsEchartsPie,TrsEchartsMap,TrsEchartPolyline</div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line">export  class TrsEchartsModule&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -355,18 +329,24 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/angular2-x/" rel="tag">#angular2.x</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/10/28/angular/angular1.x性能问题解决方案/" rel="next" title="angular1.x 性能问题解决方案">
+                <i class="fa fa-chevron-left"></i> angular1.x 性能问题解决方案
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/25/angular/angular1.x精华插件/" rel="prev" title="angular1.x 精华插件">
-                angular1.x 精华插件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -480,7 +460,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。。"><span class="nav-number">1.</span> <span class="nav-text">如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。。</span></a></li></ol></div>
             
           </div>
         </section>
