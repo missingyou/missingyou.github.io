@@ -251,6 +251,131 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/18/angular/Angular2-中引入NgClass，NgStyle等指令/" itemprop="url">
+                  Angular2 中引入NgClass，NgStyle等指令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-18T17:08:42+08:00" content="2016-11-18">
+              2016-11-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Angular2/" itemprop="url" rel="index">
+                    <span itemprop="name">Angular2</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/18/angular/Angular2-中引入NgClass，NgStyle等指令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/18/angular/Angular2-中引入NgClass，NgStyle等指令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+
+
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><h3 id="在项目中用到NgClass-NgStyle-等自带指令时，发现报错"><a href="#在项目中用到NgClass-NgStyle-等自带指令时，发现报错" class="headerlink" title="在项目中用到NgClass ,NgStyle 等自带指令时，发现报错"></a>在项目中用到NgClass ,NgStyle 等自带指令时，发现报错</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Can&apos;t bind to &apos;ngStyle&apos; since it isn&apos;t a known property</div></pre></td></tr></table></figure>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="1-如果是Web端，在主模块如App-module中引入-BrowserModule"><a href="#1-如果是Web端，在主模块如App-module中引入-BrowserModule" class="headerlink" title="1.如果是Web端，在主模块如App.module中引入 BrowserModule"></a>1.如果是Web端，在主模块如App.module中引入 BrowserModule</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123;BrowserModule&#125; from &quot;@angular/platform-browser&quot;;</div></pre></td></tr></table></figure>
+<h3 id="2-在用到NgClass的module-中引入CommonModule"><a href="#2-在用到NgClass的module-中引入CommonModule" class="headerlink" title="2.在用到NgClass的module 中引入CommonModule"></a>2.在用到NgClass的module 中引入CommonModule</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">例如在a.component中需要用ngClass指令，则在申明a.component的a.module中引入</div><div class="line">import &#123;CommonModule&#125; from &quot;@angular/common&quot;</div><div class="line">并在 import 中引入</div></pre></td></tr></table></figure>
+<h3 id="官方文档中居然没有这一说明，这个能喷么"><a href="#官方文档中居然没有这一说明，这个能喷么" class="headerlink" title="官方文档中居然没有这一说明，这个能喷么!!"></a>官方文档中居然没有这一说明，这个能喷么!!</h3>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/16/angular/Angular2-x引入第三方组件/" itemprop="url">
                   Angular2.x引入第三方组件
                 </a>
@@ -895,7 +1020,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -903,7 +1028,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -912,7 +1037,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
