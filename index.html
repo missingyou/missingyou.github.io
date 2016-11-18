@@ -267,8 +267,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/11/16/angular/Angular2-x引入第三方组件/" itemprop="url">
-                  Angular2.x引入第三方组件
+                <a class="post-title-link" href="/2016/11/18/angular/Angular2-x引入第三方组件/" itemprop="url">
+                  未命名
                 </a>
               
             
@@ -281,8 +281,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-16T17:55:59+08:00" content="2016-11-16">
-              2016-11-16
+            <time itemprop="dateCreated" datetime="2016-11-18T14:19:54+08:00" content="2016-11-18">
+              2016-11-18
             </time>
           </span>
 
@@ -314,9 +314,7 @@
       
         
           
-            <h3 id="有时我们需要引入第三方的组件，比如Echarts-Jquery，D3等，在Angular2-x中引入这些组件是非常之方便的，秩序在文件头使用关键字declar-下面给出例子"><a href="#有时我们需要引入第三方的组件，比如Echarts-Jquery，D3等，在Angular2-x中引入这些组件是非常之方便的，秩序在文件头使用关键字declar-下面给出例子" class="headerlink" title="有时我们需要引入第三方的组件，比如Echarts,Jquery，D3等，在Angular2.x中引入这些组件是非常之方便的，秩序在文件头使用关键字declar,下面给出例子"></a>有时我们需要引入第三方的组件，比如Echarts,Jquery，D3等，在Angular2.x中引入这些组件是非常之方便的，秩序在文件头使用关键字declar,下面给出例子</h3><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">declare var echarts: any;</div></pre></td></tr></table></figure></p>
-<h1 id="使用echarts-开发Angular2-x版的指令-一下是一个Echarts的Pie组件，简单例子，当然在实际应用中Echarts这些数据都是从服务中获取的。"><a href="#使用echarts-开发Angular2-x版的指令-一下是一个Echarts的Pie组件，简单例子，当然在实际应用中Echarts这些数据都是从服务中获取的。" class="headerlink" title="使用echarts 开发Angular2.x版的指令,一下是一个Echarts的Pie组件，简单例子，当然在实际应用中Echarts这些数据都是从服务中获取的。"></a>使用echarts 开发Angular2.x版的指令,一下是一个Echarts的Pie组件，简单例子，当然在实际应用中Echarts这些数据都是从服务中获取的。</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">import &#123;Directive, ElementRef, Renderer&#125; from &quot;@angular/core&quot;;</div><div class="line">declare var echarts: any;</div><div class="line"></div><div class="line">@Directive(&#123;</div><div class="line">    selector: &apos;[trs-echarts-pie]&apos;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">export class TrsEchartsPie &#123;</div><div class="line">    constructor(el: ElementRef, render: Renderer) &#123;</div><div class="line"></div><div class="line">        var myChart = echarts.init(el.nativeElement);</div><div class="line">        myChart.setOption(&#123;</div><div class="line">            tooltip: &#123;</div><div class="line">                trigger: &apos;item&apos;,</div><div class="line">                formatter: &quot;&#123;a&#125; &lt;br/&gt;&#123;b&#125;: &#123;c&#125; (&#123;d&#125;%)&quot;</div><div class="line">            &#125;,</div><div class="line">            legend: &#123;</div><div class="line">                orient: &apos;vertical&apos;,</div><div class="line">                x: &apos;left&apos;,</div><div class="line">                data:[&apos;直接访问&apos;,&apos;邮件营销&apos;,&apos;联盟广告&apos;,&apos;视频广告&apos;,&apos;搜索引擎&apos;]</div><div class="line">            &#125;,</div><div class="line">            series: [</div><div class="line">                &#123;</div><div class="line">                    name:&apos;访问来源&apos;,</div><div class="line">                    type:&apos;pie&apos;,</div><div class="line">                    radius: [&apos;50%&apos;, &apos;70%&apos;],</div><div class="line">                    avoidLabelOverlap: false,</div><div class="line">                    label: &#123;</div><div class="line">                        normal: &#123;</div><div class="line">                            show: false,</div><div class="line">                            position: &apos;center&apos;</div><div class="line">                        &#125;,</div><div class="line">                        emphasis: &#123;</div><div class="line">                            show: true,</div><div class="line">                            textStyle: &#123;</div><div class="line">                                fontSize: &apos;30&apos;,</div><div class="line">                                fontWeight: &apos;bold&apos;</div><div class="line">                            &#125;</div><div class="line">                        &#125;</div><div class="line">                    &#125;,</div><div class="line">                    labelLine: &#123;</div><div class="line">                        normal: &#123;</div><div class="line">                            show: false</div><div class="line">                        &#125;</div><div class="line">                    &#125;,</div><div class="line">                    data:[</div><div class="line">                        &#123;value:335, name:&apos;直接访问&apos;&#125;,</div><div class="line">                        &#123;value:310, name:&apos;邮件营销&apos;&#125;,</div><div class="line">                        &#123;value:234, name:&apos;联盟广告&apos;&#125;,</div><div class="line">                        &#123;value:135, name:&apos;视频广告&apos;&#125;,</div><div class="line">                        &#123;value:1548, name:&apos;搜索引擎&apos;&#125;</div><div class="line">                    ]</div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+            
           
         
       
@@ -365,8 +363,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/11/16/angular/Angular2-x指令引入问题/" itemprop="url">
-                  Angular2.x指令引入问题
+                <a class="post-title-link" href="/2016/11/18/angular/Angular2-x指令引入问题/" itemprop="url">
+                  未命名
                 </a>
               
             
@@ -379,8 +377,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-16T17:30:16+08:00" content="2016-11-16">
-              2016-11-16
+            <time itemprop="dateCreated" datetime="2016-11-18T14:19:45+08:00" content="2016-11-18">
+              2016-11-18
             </time>
           </span>
 
@@ -412,9 +410,7 @@
       
         
           
-            <h3 id="如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。Angular1-x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2-x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块"><a href="#如果你是Angular1-x的开发者，相信你也会在Angular2-x的指令引入上遇到麻烦。Angular1-x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2-x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块" class="headerlink" title="如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块!"></a>如果你是Angular1.x的开发者，相信你也会在Angular2.x的指令引入上遇到麻烦。Angular1.x的指令的作用域是全局，只要在顶层模块引入了指令模块，全应用都可以使用，而到了Angular2.x版本，首先你必须在Module的declarations中声明该指令，并且在exports中导出这些指令，然后在需要用到该指令的地方再引入该模块!</h3><p> eg:<br> 声明：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">    declarations:[TrsEchartsPie,TrsEchartsMap,TrsEchartPolyline],</div><div class="line">    exports:[TrsEchartsPie,TrsEchartsMap,TrsEchartPolyline</div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line">export  class TrsEchartsModule&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p> 使用：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">    imports:[</div><div class="line">        TrsEchartsModule,//用到该指令的地方都需要引入</div><div class="line">    ],</div><div class="line">    declarations:[RealTimeComponent],</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-
+            
           
         
       
@@ -852,13 +848,6 @@
             </div>
           
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
           
 
         </nav>
